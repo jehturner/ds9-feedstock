@@ -22,6 +22,10 @@ PKG_CONFIG_PATH="${PKG_CONFIG_PATH}:${PREFIX}/share/pkgconfig"
 # Patches are applied in meta.yaml so that everything can be built against
 # conda's X11 libs and the latest ds9 Makefile won't override TKFLAGS below.
 
+# Make sure patched files are newer than their sources, so they won't get
+# regenerated/overwritten by autotools:
+touch unix/configure unix/Makefile.in tkimg/libtiff/configure
+
 # Build for X11 (irrespective of the platform):
 ./unix/configure \
   --prefix="${PREFIX}" \
