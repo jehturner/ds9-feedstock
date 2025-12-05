@@ -38,7 +38,7 @@ requirements:
     - fontconfig
     - freetype
     - libiconv
-    - libxml2-devel
+    - libxml2
     - libxslt
     - xorg-libx11
     - xorg-libxft
