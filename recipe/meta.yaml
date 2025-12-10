@@ -22,7 +22,6 @@ build:
   skip: true  # [win]
   ignore_run_exports:  # these are only *direct* deps at build time
     - libexpat
-    - libxml2
     - libxslt
 
 requirements:
@@ -39,7 +38,9 @@ requirements:
     - expat
     - fontconfig
     - freetype
+    - icu      # remove once libxml2 is updated with libxml2-devel
     - libiconv
+    - liblzma  # remove once libxml2 is updated with libxml2-devel
     - libxml2
     - libxslt
     - xorg-libx11
